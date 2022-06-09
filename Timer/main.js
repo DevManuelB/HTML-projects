@@ -20,7 +20,7 @@ startButton.addEventListener('click', () => {
       timer.innerHTML = h + ':' + m + ':' + s;
       await sleep(1000);
 
-      if(s == 60) {
+      if(s == 59) {
         s = 0;
         m++;
       }
