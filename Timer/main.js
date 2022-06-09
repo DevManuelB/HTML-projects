@@ -1,5 +1,6 @@
 let timer = document.querySelector('.timer');
 let startButton = document.querySelector('.start');
+let resetButton = document.querySelector('.reset');
 let stopButton = document.querySelector('.stop');
 
 let h = 0;
@@ -37,5 +38,16 @@ startButton.addEventListener('click', () => {
 
 stopButton.addEventListener('click', () => {
   bool = false;
+  startButton.disabled = false;
+});
+
+resetButton.addEventListener('click', () => {
+  bool = false;
+
+  h = 0;
+  m = 0;
+  s = 0;
+
+  timer.innerHTML = h + ':' + m + ':' + s;
   startButton.disabled = false;
 });
